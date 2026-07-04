@@ -64,7 +64,7 @@ class ConcatNode(ASTNode):
         return f"Concat({len(self.children)} items)"
     
 @dataclass
-class AlternationNodes(ASTNode):
+class AlternationNode(ASTNode):
     alternatives: List[ASTNode]
     
     def __repr__(self):

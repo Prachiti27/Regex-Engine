@@ -13,7 +13,7 @@ class TokenType(Enum):
     QUESTION = (
         auto()
     )                     # zero or one
-    LBARCE = auto()       # {
+    LBRACE = auto()       # {
     RBRACE = auto()       # }
     COMMA = auto()
     PIPE = auto()         # or
@@ -105,7 +105,7 @@ class Lexer:
                 tokens.append(Token(TokenType.QUESTION, char, start_pos))
                 self.advance()
             elif char == "{":
-                tokens.append(Token(TokenType.LBARCE, char, start_pos))
+                tokens.append(Token(TokenType.LBRACE, char, start_pos))
                 self.advance()
             elif char == "}":
                 tokens.append(Token(TokenType.RBRACE, char, start_pos))
